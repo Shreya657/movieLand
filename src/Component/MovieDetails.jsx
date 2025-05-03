@@ -2,10 +2,14 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './MovieDetails.css';
 
-const API_URL = "http://www.omdbapi.com/?&apikey=69f646ff";
-const YOUTUBE_API_KEY = "AIzaSyAWBb5cmyd3P4YsilAGEgNC1k3yUAlaIAk";
+
 
 function MovieDetails() {
+
+  const YOUTUBE_API_KEY = process.env.REACT_APP_YT_API_KEY;
+console.log(YOUTUBE_API_KEY )
+const API_URL =process.env.REACT_APP_OMDB_API_KEY ;
+
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [actorImages, setActorImages] = useState({});
