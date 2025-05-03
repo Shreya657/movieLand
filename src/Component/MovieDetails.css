@@ -1,0 +1,136 @@
+.movie-details {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1e1e2f;
+    border-radius: 12px;
+    color: #f5f5f5;
+    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #61dafb;
+    text-align: center;
+    animation: slideInDown 0.6s ease;
+  }
+  
+  .movie-details p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  
+  .actors {
+    margin: 2rem 0;
+  }
+  
+  .actors strong {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .actors div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .actors > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+  }
+  
+  .actors img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .actors img:hover {
+    transform: scale(1.1);
+  }
+  
+  .actors p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  
+  iframe {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(97, 218, 251, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  iframe:hover {
+    transform: scale(1.03);
+  }
+  
+  .movie-details img {
+    display: block;
+    margin: 2rem auto 0;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-details img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .movie-details {
+      padding: 1rem;
+    }
+  
+    .actors img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .movie-details p {
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    line-height: 1.6;
+    max-width: 600px; /* limit width */
+    text-align: justify;
+  }
+  
